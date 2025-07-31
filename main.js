@@ -4,7 +4,7 @@ const translations = {
     slider1_title: ["Download The", "Alam Water", "App Now"],
     slider1_desc: ["and enjoy a convenient and", "easy shopping experience."],
     our_products_title: "Our Products",
-    our_products_btn:["500 ml", "330 ml", "200 ml"],
+    our_products_btn: ["500 ml", "330 ml", "200 ml"],
     our_products_desc_500: "clock in the production process, with quantities issued from the production line exceeding 500,000 packages per day. The plant produces vials with various capacities, including 1500 ml vials, 500 ml vials, 330 ml vials, and 200 ml mugs. We strive to achieve an increase in production by improving workforce performance and increasing the efficiency of technicians and specialists, as well as attention to the quality of raw materials and the quality of the final product.",
     our_products_desc_330: "clock in the production process, with quantities issued from the production line exceeding 500,000 packages per day. The plant produces vials with various capacities, including 1500 ml vials, 500 ml vials, 330 ml vials, and 200 ml mugs. We strive to achieve an increase in production by improving workforce performance and increasing the efficiency of technicians and specialists, as well as attention to the quality of raw materials and the quality of the final product.",
     our_products_desc_200: "clock in the production process, with quantities issued from the production line exceeding 500,000 packages per day. The plant produces vials with various capacities, including 1500 ml vials, 500 ml vials, 330 ml vials, and 200 ml mugs. We strive to achieve an increase in production by improving workforce performance and increasing the efficiency of technicians and specialists, as well as attention to the quality of raw materials and the quality of the final product.",
@@ -28,14 +28,14 @@ const translations = {
     our_contact2_2_input_message: "Message",
     our_contact2_2_button: "Send Message",
     footer_link: ["home", "our products", "our story", "our water", "our contact"],
-    footer_desc: "Our company works around the clock in the production process, with quantities issued from the production line exceeding 500,000 packages per day. The plant produces vials with various capacities, including 1500 ml vials, 500 ml vials, 330 ml vials, and 200 ml mugs. We strive to achieve an increase in production by improving workforce performance and increasing the efficiency of technicians and specialists, as well as attention to the quality of raw materials we use.",
+    footer_desc: "Our company works around the clock in the production process, with quantities issued from the production line exceeding 2,500,000 packages per day. The plant produces vials with various capacities, including 1500 ml vials, 500 ml vials, 330 ml vials, and 200 ml mugs. We strive to achieve an increase in production by improving workforce performance and increasing the efficiency of technicians and specialists, as well as attention to the quality of raw materials we use.",
     footer_app: "Download App Now",
-    footer_copyright: "© 2025 Alam Healthy Water . All Rights Reserved. Al-Rawan Company for the Production of Soft Drinks and Healthy Water.",
+    footer_copyright: "© 2025 Alam Healthy Water . All Rights Reserved. Al-Rawan Company for the Production of Soft Drinks and Healthy Water and Carbon Dioxide.",
     button: "AR",
   },
   ar: {
     header: ["منتجاتنا", "قصتنا", "مياهنا", "اتصل بنا"],
-    slider1_title: ["حمّل تطبيق", "مياه العالم", "الآن"],
+    slider1_title: ["حمّل تطبيق", "مياه عالم", "الان"],
     slider1_desc: ["واستمتع بتجربة تسوق", "سهلة ومريحة."],
     our_products_title: "منتجاتنا",
     our_products_btn: ["500 مل", "330 مل", "200 مل"],
@@ -64,9 +64,9 @@ const translations = {
     our_contact2_2_input_subject: "الموضوع",
     our_contact2_2_button: "إرسال الرسالة",
     footer_link: ["الرئيسية", "منتجاتنا", "قصتنا", "مياهنا", "اتصل بنا"],
-    footer_desc: "يعمل مصنعنا على مدار الساعة في عملية الإنتاج، حيث تتجاوز الكميات الصادرة من خط الإنتاج 500,000 عبوة يوميًا. ينتج المصنع عبوات بسعات مختلفة، بما في ذلك عبوات 1500 مل، و500 مل، و330 مل، وأكواب 200 مل. نسعى لتحقيق زيادة في الإنتاج من خلال تحسين أداء القوى العاملة وزيادة كفاءة الفنيين والمتخصصين، بالإضافة إلى الاهتمام بجودة المواد الخام وجودة المنتج النهائي.",
+    footer_desc: "يعمل مصنعنا على مدار الساعة في عملية الإنتاج، حيث تتجاوز الكميات الصادرة من خط الإنتاج 2,500,000 عبوة يوميًا. ينتج المصنع عبوات بسعات مختلفة، بما في ذلك عبوات 1500 مل، و500 مل، و330 مل، وأكواب 200 مل. نسعى لتحقيق زيادة في الإنتاج من خلال تحسين أداء القوى العاملة وزيادة كفاءة الفنيين والمتخصصين، بالإضافة إلى الاهتمام بجودة المواد الخام وجودة المنتج النهائي.",
     footer_app: "حمّل التطبيق الآن",
-    footer_copyright: "© 2025 مياه العلم الصحية. جميع الحقوق محفوظة. شركة الروان لإنتاج المشروبات الغازية والمياه الصحية.",
+    footer_copyright: "© 2025  مياه عالم الصحية. جميع الحقوق محفوظة لشركة الروان لإنتاج المشروبات الغازية والمياه الصحية وغاز ثاني اوكسيد الكاربون.",
     button: "EN",
   },
 };
@@ -108,7 +108,7 @@ class LoadingScreen {
 new LoadingScreen();
 
 // Skip loader on click
-document.getElementById("loading-screen").addEventListener("click", function() {
+document.getElementById("loading-screen").addEventListener("click", function () {
   if (!this.classList.contains("fade-out")) {
     new LoadingScreen().hideLoader();
   }
@@ -119,21 +119,21 @@ function applyTranslations() {
   const data = translations[currentLang];
 
   // Single elements
-document.querySelectorAll("[data-i18n]").forEach(el => {
-  const key = el.getAttribute("data-i18n");
-  if (!data[key]) return;
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (!data[key]) return;
 
-  if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-    el.placeholder = data[key];
-  } else if (el.tagName === "BUTTON") {
-    el.textContent = data[key];
-  } else {
-    el.textContent = data[key];
-  }
-});
+    if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+      el.placeholder = data[key];
+    } else if (el.tagName === "BUTTON") {
+      el.textContent = data[key];
+    } else {
+      el.textContent = data[key];
+    }
+  });
 
   // Arrays
-  document.querySelectorAll("[data-i18n-array]").forEach(el => {
+  document.querySelectorAll("[data-i18n-array]").forEach((el) => {
     const key = el.getAttribute("data-i18n-array");
     const idx = +el.getAttribute("data-index");
     if (Array.isArray(data[key]) && data[key][idx] != null) {
@@ -152,25 +152,27 @@ document.querySelectorAll("[data-i18n]").forEach(el => {
   if (activeYear) changeTimeline(activeYear);
 
   // Set direction and style based on currentLang
-const dir = currentLang === "ar" ? "rtl" : "ltr";
-const styleClass = currentLang === "ar" ? "arabic-style" : "english-style";
+  const dir = currentLang === "ar" ? "rtl" : "ltr";
+  const styleClass = currentLang === "ar" ? "arabic-style" : "english-style";
 
-// مثلا نطبقها على body والـ form
-// document.body.setAttribute("dir", dir);
+  document.body.classList.remove("arabic-style", "english-style");
 
-// مثال: تغيير الاتجاه والشكل لعناصر معينة حسب ID
-const idsToUpdate = ["our_products_translations", "our_story_translations", "our_story2_translations", "our_contact2","footer_desc","swiper1_content_translations"];
-idsToUpdate.forEach(id => {
-  const el = document.getElementById(id);
-  if (el) {
-    // إزالة الكلاسات القديمة إن وجدت
-    el.classList.remove("arabic-style", "english-style");
+  // Add appropriate class
+  document.body.classList.add(styleClass);
 
-    // إضافة الكلاس المناسب
-    el.classList.add(styleClass);
-  }
-});
+  // Apply direction and style to specified elements
+  const idsToUpdate = ["our_products_translations", "our_story_translations", "our_story2_translations", "our_contact2", "footer_desc", "swiper1_content_translations"];
 
+  idsToUpdate.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      // Remove old classes if they exist
+      el.classList.remove("arabic-style", "english-style");
+
+      // Add appropriate class
+      el.classList.add(styleClass);
+    }
+  });
 }
 
 function bindInteractions() {
@@ -181,31 +183,37 @@ function bindInteractions() {
   });
 
   // OurProducts buttons
-  document.querySelectorAll(".OurProducts .button_active").forEach(btn => {
+  document.querySelectorAll(".OurProducts .button_active").forEach((btn) => {
     btn.addEventListener("click", () => changeText(btn));
   });
 
   // Timeline years
-  document.querySelectorAll(".timeline-year").forEach(el => {
+  document.querySelectorAll(".timeline-year").forEach((el) => {
     el.addEventListener("click", () => changeTimeline(el));
   });
 
   // IntersectionObservers
-  new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        document.getElementById("product-image").classList.add("animate__fadeInLeft", "show");
-      }
-    });
-  }, { threshold: 0.5 }).observe(document.getElementById("product-image"));
+  new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          document.getElementById("product-image").classList.add("animate__fadeInLeft", "show");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  ).observe(document.getElementById("product-image"));
 
-  new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        document.getElementById("Story-image").classList.add("animate__fadeInRight", "show");
-      }
-    });
-  }, { threshold: 0.5 }).observe(document.getElementById("Story-image"));
+  new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          document.getElementById("Story-image").classList.add("animate__fadeInRight", "show");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  ).observe(document.getElementById("Story-image"));
 }
 
 // ****************** Section Handlers ******************
@@ -217,7 +225,7 @@ function changeText(btn) {
   const p = document.getElementById("product-text");
   const img = document.getElementById("product-image");
 
-  document.querySelectorAll(".button_active").forEach(x => x.classList.remove("active"));
+  document.querySelectorAll(".button_active").forEach((x) => x.classList.remove("active"));
   btn.classList.add("active");
 
   p.classList.replace("fade-in", "fade-out");
@@ -233,7 +241,7 @@ function changeText(btn) {
 
 function changeTimeline(el) {
   const data = translations[currentLang];
-  document.querySelectorAll(".timeline-year").forEach(y => y.classList.remove("highlight"));
+  document.querySelectorAll(".timeline-year").forEach((y) => y.classList.remove("highlight"));
   el.classList.add("highlight");
 
   const key = el.getAttribute("data-desc-key");
